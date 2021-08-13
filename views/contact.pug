@@ -1,0 +1,14 @@
+extends base.pug
+
+block style 
+  style
+    include ../static/style.css
+block content 
+  div#contactus 
+    h1#contacthead Contact with us 
+    form(action="/contact", method="post") 
+        input(type="text", class="input", name="name", placeholder="Enter your name")
+        input(type="number", class="input", name="age", placeholder="Enter your age")
+        input(type="text number", class="input", name="email", placeholder="Enter your Email")
+        input(type="text", class="input", name="mobileno", placeholder="Enter your Mobile number")
+        button#submit Submit 

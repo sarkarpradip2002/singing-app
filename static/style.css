@@ -1,0 +1,177 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 50px;
+    margin: 0px;
+    margin-left: -20px;
+    justify-content: center;
+    align-items: center;
+}
+ul::before{
+    content: "";
+    background-color: #df00ff;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+ ul li{
+     list-style: none;
+     margin: 0px 15px;
+ }
+ ul li a{
+     text-decoration: none;
+     color: white;
+     font-family: 'Architects Daughter', cursive;
+ }
+
+ #introsection{
+    height: 378px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+     margin-top: 0px;
+ }
+ #introsection::before{
+     content: "";
+     background: url("/static/intro.jpg") center center/cover no-repeat;
+     height: 100%;
+     width: 104%;
+     position: absolute;
+     z-index: -1;
+     opacity: 1;
+ }
+ #introsection h2{
+    margin-top: 12px;
+    font-size: 3rem;
+    color: white;
+    font-family: 'Architects Daughter', cursive;
+ }
+ #introsection div{
+    margin-top: -8px;
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Architects Daughter', cursive;
+ }
+ #sponcerssection{
+    height: 378px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+     margin-top: 28px;
+ }
+ #sponcerssection::before{
+    content: "";
+    background: url("/static/logo.jpg") center center/cover no-repeat;
+    height: 100%;
+    width: 104%;
+    position: absolute;
+    z-index: -1;
+    opacity: 1;
+}
+#sponcerssection h2{
+    font-size: 2rem;
+    color: white;
+    width: 50%;
+    text-align: center;
+    font-family: 'Architects Daughter', cursive;
+}
+
+#templates{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 28px;
+}
+.card{
+    border: 2px solid crimson;
+    display: flex;
+    flex-direction: column;
+    width: 42%;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 51px;
+    background-color: #ecdfff;
+}
+
+.cardimage img{
+    height: 206px;
+    width: 304px;
+    border-radius: 36px;
+    margin-top: 20px;
+}
+.cardcontent{
+    font-size: 1.5rem;
+    margin-bottom: -8px;
+    margin-top: 1px;
+    font-family: 'Architects Daughter', cursive;}
+.cardhead{
+    font-size: 2rem;
+    text-decoration: underline;
+    color: crimson;
+    font-family: 'Architects Daughter', cursive;
+}
+
+footer{
+    background-color: grey;
+    height: 45px;
+    width: 102%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#contacthead{
+    text-align: center;
+    text-decoration: underline;
+    color: crimson;
+    font-family: 'Architects Daughter', cursive;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 102%;
+    font-family: 'Architects Daughter', cursive;
+}
+form input{
+    width: 27%;
+    height: 37px;
+    margin: 13px;
+    border-radius: 20px;
+    padding: 5px 20px;
+    font-family: 'Architects Daughter', cursive;
+}
+#contactus{
+    margin-top: 115px;
+    margin-bottom: 174px;
+    border: 2px solid red;
+    width: 100%;
+    border-radius: 262px;
+    margin-left: -2px;
+    background-color: #e9e9ff;
+    font-family: 'Architects Daughter', cursive;
+}
+#submit{
+    margin-left: 47%;
+    margin-bottom: 20px;
+    padding: 11px;
+    border-radius: 16px;
+    background-color: crimson;
+    color: wheat;
+    cursor: pointer;
+    font-family: 'Architects Daughter', cursive;
+}

@@ -40,6 +40,4 @@ app.post('/contact',(req,res)=>{
     })
 })
 
-app.listen(port,()=>{
-    console.log(`The port is start at ${port}`);
-})
+app.listen(process.env.PORT || 5400)

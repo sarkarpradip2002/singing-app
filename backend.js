@@ -5,7 +5,7 @@ let path=require('path');
 const mongoose=require('mongoose');
 mongoose.connect('mongodb://localhost/singingcontact', {useNewUrlParser: true, useUnifiedTopology: true});
 let app=express();
-const port=5000;
+const port=5400;
 
 var db=mongoose.connection;
 
@@ -34,7 +34,7 @@ app.get('/contact',(req,res)=>{
 app.post('/contact',(req,res)=>{
     var mydata=new contact(req.body);
     mydata.save().then(()=>{
-        res.render("Your data ahas been stored in database");
+        res.send("Your data has been stored in database");
     }).catch(()=>{
         res.status(400).send("Your data has not been stored");
     })

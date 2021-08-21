@@ -3,7 +3,7 @@ let fs=require('fs');
 let path=require('path');
 // const bodyparser=require('body parser');
 const mongoose=require('mongoose');
-mongoose.connect('mongodb://localhost/singingcontact', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb+srv://1234:1234@cluster0.6cq1m.mongodb.net/singingcontact?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
 let app=express();
 const port=5400;
 
@@ -19,7 +19,7 @@ var contactschema=new mongoose.Schema({
 var contact=mongoose.model('contactus',contactschema);
 
 app.use('/static',express.static('static'));
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended:true}));
 
 app.set('view engine','pug');
 
@@ -40,4 +40,6 @@ app.post('/contact',(req,res)=>{
     })
 })
 
-app.listen(process.env.PORT || 5400)
+app.listen(process.env.PORT || 5400,()=>{
+    console.log("connected...");
+})
